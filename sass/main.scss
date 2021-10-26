@@ -1,3 +1,218 @@
+$dorado: #efb810;
+$azul: #4733ff;
+$negro: #0f0f11;
+$blanco: #fbffff;
+$rojo: #ff6347;
+
+/*--------------------
+// Generales
+--------------------*/
+
 *{
 	font-family: 'Roboto', sans-serif;
+	color: $negro;
+	list-style: none;
+}
+
+img{
+	max-width: 100%;
+}
+
+a{
+	text-decoration: none;
+}
+
+h2{
+	text-align: center;
+	color: $azul;
+}
+
+/*--------------------
+// Encabezado
+--------------------*/
+
+header{
+	background: $blanco;
+	padding: 10px 0;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+
+	.contenedor-encabezado{
+		display: flex;
+		justify-content: space-between;
+
+		.col-izq{
+			margin-left: 15px;
+		}
+
+		.col-der{
+			margin-right: 15px;
+
+			.contenedor-avatar{
+				height: 60px;
+				width: 60px;
+				position: relative;
+
+				img{
+					border-radius: 100%;
+					box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+				}
+
+				i{
+					position: absolute;
+					top: 0;
+					left: 0;
+					color: $rojo;
+
+				}
+			}
+		}
+	}	
+}
+
+/*--------------------
+// Contenido principal
+--------------------*/
+
+.main{
+	padding-top: 120px;
+
+	.busqueda{
+
+		input{
+			margin-bottom: 10px;
+			width: 96%;
+			display: block;
+			border-radius: 5px;
+			border-color: $dorado;
+			justify-content: center;
+			font-size: 16px;
+		}
+
+		button{
+			display: block;
+			border-radius: 5px;
+			border-color: $dorado;
+			background-color: $dorado;
+			color: $blanco;
+			width: 98%;
+			text-transform: uppercase;
+			font-size: 16px;
+		}
+	}
+
+	.product-list-container{
+		margin: 0 auto;
+
+		ul{
+			margin-left: -20px;
+			margin-right: 10px;
+
+			li{
+				box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+				margin-bottom: 20px;
+				}
+
+				.product-info{
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					position: relative;
+
+					.product-info-inner{
+						width: 70%;
+						display: flex;
+						flex-direction: column;
+						flex-wrap: wrap;
+
+						.tags{
+							display: flex;
+							position: absolute;
+							align-items: center;
+							justify-content: center;
+							left: 50%;
+							top: -15px;
+							transform: translateX(-50%);
+							width: 100%;
+
+							span{
+								display: block;
+								background: $dorado;
+								border-radius: 10px;
+								color: $negro;
+								font-size: 20px;
+								width: 40%;
+								text-align: center;
+							}
+						}
+
+						.product-name{
+							margin-bottom: -5px;
+							margin-left: 5px;
+						}
+
+						.restaurant{
+							font-size: 18px;
+							margin-left: 5px;
+						}
+
+						.stars{
+							font-size: 30px;
+							margin-left: 5px;
+
+							i:nth-child(n){
+								color: $dorado;
+							}
+						}
+					}
+
+					.product-price{
+						width: 30%;
+						
+						p{
+							text-align: center;
+							margin-top: 50%;
+							font-size: 20px;
+							font-weight: 700;
+							color: $azul;
+						}
+					}
+				}
+			}
+		}
+
+		.shop{
+			display: flex;
+			text-align: center;
+			justify-content: center;
+
+			a{
+				display: flex;
+				background: $azul;
+				color: $blanco;
+				border-radius: 10px;
+				width: 50%;
+				align-items: center;
+				justify-content: center;
+				height: 50px;
+
+
+				span{
+					font-size: 20px;
+					color: $blanco;
+
+				}
+
+				i{
+					font-size: 25px;
+					color: $dorado;
+
+				}
+			}
+		}
+	}
 }
